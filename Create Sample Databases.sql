@@ -31,5 +31,11 @@ BEGIN
 	EXEC('CREATE TABLE MyStagingDB.stg.Vendors (VendorID INT, DummyData varchar(100))');
 END 
 
+/*
+USE MASTER
+GO
+DROP DATABASE MySourceDB;
+DROP DATABASE MyStagingDB;
+*/
 
 
