@@ -1,0 +1,23 @@
+/* 
+FQSourceTableName string variable
+*/
+
+@[$Project::SourceDatabase]+"."+@[$Project::SourceSchema]+"."+ @[$Package::SourceTableName]
+
+/* 
+FQStagingTableName string variable
+*/
+
+@[$Project::StagingDatabase]+"."+@[$Project::StagingSchema]+"."+ @[$Package::StagingTableName] 
+
+/* 
+QueryTruncateStagingTable string variable
+*/
+
+"TRUNCATE TABLE " + @[User::FQStagingTableName]
+
+/*
+QuerySource string variable
+*/
+
+"SELECT * FROM "+@[User::FQSourceTableName]
